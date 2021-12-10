@@ -1,5 +1,7 @@
 <template>
-  <Tutorial/>
+  <div>
+    this is index.vue
+  </div>
 </template>
 
 <script>
