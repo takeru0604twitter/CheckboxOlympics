@@ -1,6 +1,6 @@
 <template>
   <div>
-    this is index.vue
+    this is index.vue.
   </div>
 </template>
 
