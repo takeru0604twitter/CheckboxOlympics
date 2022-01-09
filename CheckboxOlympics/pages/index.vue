@@ -13,8 +13,8 @@
         <div class="i">Don't false start.</div>
       </div>
       <div class="j">
-        <div class="k"><a  href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Watch how on </a></div>
-        <div class="l"><a  href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Youtube</a></div>
+        <div class="k"><a href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Watch how on </a></div>
+        <div class="l"><a href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Youtube</a></div>
       </div>
       <div class="m"><button>check</button></div>
     </div>
@@ -35,7 +35,7 @@ body {
 
   .box1{
     display: block;
-    background-color:red;
+    
     
   }
 
