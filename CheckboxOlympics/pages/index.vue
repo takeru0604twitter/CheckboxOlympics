@@ -23,7 +23,9 @@
         <div class="n"><input v-for="i in 28" :key="i" type="checkbox" /></div>
       </div>
 
-      <div class="box3">time</div>
+      <div class="box3">
+        <div class="o">Time: not yet set</div>
+      </div>
     </div>
   </div>
 </template>
@@ -50,19 +52,21 @@ body {
 .box {
   position: relative;
   display: flex;
-  margin-top:  100px;
-  margin-left: 100px;
+  margin-top:  250px;
+  margin-left: 400px;
 }
 
 .box1 {
   background: red;
-  padding: 150px;
+  padding: 70px;
 }
 
 .box2 {
   background: blue;
-  padding-right: 200px;
-  padding-left: 200px;
+  padding-right: 100px;
+  padding-left: 100px;
+  border-left: solid;
+  border-bottom: solid;
 }
 
 .box3 {
@@ -115,7 +119,10 @@ body {
 }
 
 .n{
-  padding-top: 250px;
+  padding-top: 200px;
+}
 
+.o{
+  padding-left: 30px;
 }
 </style>
