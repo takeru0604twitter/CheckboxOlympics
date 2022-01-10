@@ -1,24 +1,30 @@
 <template>
-
   <div>
-    <div class="a">CheckB<input type="checkbox" checked>x <input type="checkbox" checked>lympics</div>
-    <div class="box1">
-      <div class="b">100 Meter Sprint</div>
-      <div class="c">
-        <div class="d">When the start</div>
-        <div class="e">board reads Go,</div>
-        <div class="f">begin clicking,</div>
-        <div class="g">speed is what</div>
-        <div class="h">matters here.</div>
-        <div class="i">Don't false start.</div>
+    <div class="a">CheckB<input type="checkbox" checked class="a1">x <input type="checkbox" checked calss="a2">lympics</div>
+    <div class="box">
+      <div class="box1">
+        <div class="b">100 Meter Sprint</div>
+        <div class="c">
+          <div class="d">When the start</div>
+          <div class="e">board reads Go,</div>
+          <div class="f">begin clicking,</div>
+          <div class="g">speed is what</div>
+          <div class="h">matters here.</div>
+          <div class="i">Don't false start.</div>
+        </div>
+        <div class="j">
+          <div class="k"><a href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Watch how on </a></div>
+          <div class="l"><a href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Youtube</a></div>
+        </div>
+        <div class="m"><button>check</button></div>
       </div>
-      <div class="j">
-        <div class="k"><a href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Watch how on </a></div>
-        <div class="l"><a href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Youtube</a></div>
-      </div>
-      <div class="m"><button>check</button></div>
-    </div>
 
+      <div class="box2">
+        <div class="n"><input v-for="i in 28" :key="i" type="checkbox" /></div>
+      </div>
+
+      <div class="box3">time</div>
+    </div>
   </div>
 </template>
 
@@ -33,32 +39,56 @@ body {
   margin: 0px;
 }
 
-  .box1{
-    display: block;
-    
-    
-  }
+.a1{
 
-  .a{
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing:0px;
-    margin-top:20px;
-    margin-left: 15px;
-  }
+}
+
+.a2{
+
+}
+
+.box {
+  position: relative;
+  display: flex;
+  margin-top:  100px;
+  margin-left: 100px;
+}
+
+.box1 {
+  background: red;
+  padding: 150px;
+}
+
+.box2 {
+  background: blue;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
+.box3 {
+  background: green;
+}
+
+.a{
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing:0px;
+  margin-top:20px;
+  margin-left: 15px;
+}
 
 .b{
   font-size: 12px;
   font-weight: bold;
   letter-spacing: -0.5px;
-  margin-left: 470px;
-  margin-top: 300px;
+  /* margin-left: 470px;
+  margin-top: 300px; */
 }
 
 .c{
   font-size: 13px;
   font-weight: 100;
-  margin-left: 470px;
+  /* margin-left: 470px; */
   margin-top: 10px;
 }
 
@@ -68,7 +98,7 @@ body {
 
 .j{
   font-size: 13px;
-  margin-left: 470px;
+  /* margin-left: 470px; */
   }
 
 .k{
@@ -81,10 +111,11 @@ body {
 
 .m{
   margin-top: 15px;
-  margin-left: 470px;
+  /* margin-left: 470px; */
 }
 
 .n{
-  solid: #000
+  padding-top: 250px;
+
 }
 </style>
