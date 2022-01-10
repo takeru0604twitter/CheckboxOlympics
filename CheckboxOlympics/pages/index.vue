@@ -24,7 +24,8 @@
       </div>
 
       <div class="box3">
-        <div class="o">Time: not yet set</div>
+        <div class="o">Time:</div>
+        <div class="p">not yet set</div>
       </div>
     </div>
   </div>
@@ -39,14 +40,6 @@ export default {
 <style>
 body {
   margin: 0px;
-}
-
-.a1{
-
-}
-
-.a2{
-
 }
 
 .box {
@@ -71,6 +64,7 @@ body {
 
 .box3 {
   background: green;
+  display: flex;
 }
 
 .a{
@@ -124,5 +118,12 @@ body {
 
 .o{
   padding-left: 30px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.p{
+  font-size: 11px;
+
 }
 </style>
