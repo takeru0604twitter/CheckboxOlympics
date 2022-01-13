@@ -75,6 +75,14 @@ body {
   margin-left: 15px;
 }
 
+.a1{
+  font-size: 5px;
+}
+
+.a2{
+  font-size: 20px;
+}
+
 .b{
   font-size: 12px;
   font-weight: bold;
