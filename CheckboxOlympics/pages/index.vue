@@ -68,11 +68,11 @@ body {
 }
 
 .a{
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing:0px;
+  letter-spacing:-1px;
   margin-top:20px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .a1{
