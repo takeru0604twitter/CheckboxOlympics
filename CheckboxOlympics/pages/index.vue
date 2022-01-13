@@ -21,12 +21,16 @@
       </div>
 
       <div class="box2">
-        <div class="n"><input v-for="i in 28" :key="i" type="checkbox" /></div>
-        <div class="box4"></div>
+        <div class="t">
+          <div class="q">SET</div>
+          <div class="r">/</div>
+          <div class="s">GO</div>
+        </div>
+          <div class="n"><input v-for="i in 28" :key="i" type="checkbox" /></div>
       </div>
 
       <div class="box3">
-        <div class="o">Time:</div>
+        <div class="o">Time:&nbsp;</div>
         <div class="p">not yet set</div>
       </div> 
     </div>
@@ -52,12 +56,10 @@ body {
 }
 
 .box1 {
-  background: red;
   padding: 70px;
 }
 
 .box2 {
-  background: blue;
   padding-right: 100px;
   padding-left: 100px;
   border-left: solid;
@@ -65,15 +67,7 @@ body {
 }
 
 .box3 {
-  background: green;
   display: flex;
-}
-
-.box4{
-  position: relative;
-  background:gray;
-  height: 20px;
-  width: 15px;
 }
 
 .a{
@@ -98,14 +92,11 @@ body {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: -0.5px;
-  /* margin-left: 470px;
-  margin-top: 300px; */
 }
 
 .c{
   font-size: 13px;
   font-weight: 100;
-  /* margin-left: 470px; */
   margin-top: 10px;
 }
 
@@ -115,7 +106,6 @@ body {
 
 .j{
   font-size: 13px;
-  /* margin-left: 470px; */
   }
 
 .k{
@@ -128,11 +118,10 @@ body {
 
 .m{
   margin-top: 15px;
-  /* margin-left: 470px; */
 }
 
 .n{
-  padding-top: 200px;
+  padding-top: 150px;
 }
 
 .o{
@@ -144,5 +133,20 @@ body {
 .p{
   font-size: 11px;
 
+}
+
+.q{
+  color: white;
+  background-color:gray;
+}
+
+.s{
+  color: white;
+  background-color:gray;
+}
+
+.t{
+  display: flex;
+  padding-top: 20px;
 }
 </style>
