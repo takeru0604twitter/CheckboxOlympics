@@ -76,11 +76,13 @@ body {
 }
 
 .a1{
-  font-size: 5px;
+  width: 9px;
+  height: 9px;
 }
 
 .a2{
-  font-size: 20px;
+  width: 10px;
+  height: 10px;
 }
 
 .b{
