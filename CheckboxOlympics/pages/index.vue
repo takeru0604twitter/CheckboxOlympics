@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="a">CheckB<input type="checkbox" checked class="a1">x <input type="checkbox" checked calss="a2">lympics</div>
+    
     <div class="box">
       <div class="box1">
         <div class="b">100 Meter Sprint</div>
@@ -21,12 +22,13 @@
 
       <div class="box2">
         <div class="n"><input v-for="i in 28" :key="i" type="checkbox" /></div>
+        <div class="box4"></div>
       </div>
 
       <div class="box3">
         <div class="o">Time:</div>
         <div class="p">not yet set</div>
-      </div>
+      </div> 
     </div>
   </div>
 </template>
@@ -65,6 +67,13 @@ body {
 .box3 {
   background: green;
   display: flex;
+}
+
+.box4{
+  position: relative;
+  background:gray;
+  height: 20px;
+  width: 15px;
 }
 
 .a{
