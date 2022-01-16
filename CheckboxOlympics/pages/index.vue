@@ -17,7 +17,9 @@
           <div class="k"><a href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Watch how on </a></div>
           <div class="l"><a href="https://checkboxolympics.com/#:~:text=Watch%20how%20on%20YouTube">Youtube</a></div>
         </div>
-        <div class="m"><button>check</button></div>
+        <div class="m">
+          <button @click="ready">ready</button>
+        </div>
       </div>
 
       <div class="box2">
@@ -30,8 +32,9 @@
       </div>
 
       <div class="box3">
-        <div class="o">Time:&nbsp;</div>
-        <div class="p">not yet set</div>
+        <div @click="Time" class="o">Time:&nbsp;</div>
+        <!-- <div class="p">not yet set</div> -->
+        <div class="p">{{ time }}</div>
       </div> 
     </div>
   </div>
@@ -39,7 +42,31 @@
 
 <script>
 export default {
+  data() {
+    return {
+      time: undefined,
+      a: undefined,
+      b: 0
+    }
+  },
+  methods: {
+    ready() { 
+      console.log('check button is pushed')
+      const setButton = document.getElementsByClassName('q')[0]
 
+      setButton.style.backgroundColor = 'orange'
+
+      setTimeout('console.log(s)',3);
+    
+      const GOButton =document.getElementsByClassName('s')[0]
+
+      GOButton.style.backgroundColor = 'green'
+    },
+    Time() {
+      const date = new Date()
+      this.time = date
+    }
+  }
 }
 </script>
 
