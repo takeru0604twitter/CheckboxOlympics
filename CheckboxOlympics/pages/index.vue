@@ -45,8 +45,7 @@ export default {
   data() {
     return {
       time: undefined,
-      a: undefined,
-      b: 0
+
     }
   },
   methods: {
@@ -56,17 +55,18 @@ export default {
 
       setButton.style.backgroundColor = 'orange'
 
-      setTimeout('console.log(s)',3);
-    
       const GOButton =document.getElementsByClassName('s')[0]
 
-      GOButton.style.backgroundColor = 'green'
-    },
+      setTimeout (function () {
+        GOButton.style.backgroundColor = 'green';},3000);
+     
+      }
+   },
+    
     Time() {
       const date = new Date()
       this.time = date
     }
-  }
 }
 </script>
 
