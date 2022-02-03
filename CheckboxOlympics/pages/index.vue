@@ -41,6 +41,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -48,19 +49,23 @@ export default {
 
     }
   },
+  
   methods: {
     ready() { 
       console.log('check button is pushed')
       const setButton = document.getElementsByClassName('q')[0]
 
       setButton.style.backgroundColor = 'orange'
-
+      
       const GOButton =document.getElementsByClassName('s')[0]
 
       setTimeout (function () {
         GOButton.style.backgroundColor = 'green';},3000);
      
-      }
+     setTimeout (function () {
+       setButton.style.backgroundColor = 'gray';},3000)
+
+    }
    },
     
     Time() {
