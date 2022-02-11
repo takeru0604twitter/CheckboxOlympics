@@ -35,6 +35,7 @@
         <div @click="Time" class="o">Time:&nbsp;</div>
         <!-- <div class="p">not yet set</div> -->
         <div class="p">{{ time }}</div>
+        <div class="u">not yet set</div>
       </div> 
     </div>
   </div>
@@ -65,6 +66,8 @@ export default {
      setTimeout (function () {
        setButton.style.backgroundColor = 'gray';},3000)
 
+    setTimeout (function () {
+      const startTime = performance.now(); },3000)
     }
    },
     
@@ -128,7 +131,7 @@ body {
 
 .c{
   font-size: 13px;
-  font-weight: 100;
+  font-weight: 100px;
   margin-top: 10px;
 }
 
@@ -180,5 +183,9 @@ body {
 .t{
   display: flex;
   padding-top: 20px;
+}
+
+.u{
+  font-size: 11px;
 }
 </style>
