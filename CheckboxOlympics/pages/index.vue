@@ -47,8 +47,6 @@ export default {
   data() {
     return {
       time: undefined,
-      time1:undefined,
-      time2:0.001,
     }
   },
   
@@ -67,16 +65,7 @@ export default {
      setTimeout (function () {
        setButton.style.backgroundColor = 'gray';},3000)
 
-    setTimeout (function () {
-      var start = performance.now();
-      
-      for(var i = 0; i < 10000; i++){
-        for(var j = 0; j < 10000; j++);
-      }
-
-      var end = performance.now();
-      
-      console.log( 'time1 = ' + (end - start) + 'time2' ); },3000)
+    
     }
    },
     
@@ -84,7 +73,6 @@ export default {
       const date = new Date()
       this.time = date
 
-    const u =time1()
     }
 }
 </script>
