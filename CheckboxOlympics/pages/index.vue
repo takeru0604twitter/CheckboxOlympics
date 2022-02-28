@@ -35,7 +35,7 @@
         <div @click="Time" class="o">Time:&nbsp;</div>
         <!-- <div class="p">not yet set</div> -->
         <div class="p">{{ time }}</div>
-        <div class="u">not yet set</div>
+        <div id="innerHTML1"><div class="u">not yet set</div></div>
       </div> 
     </div>
   </div>
@@ -65,7 +65,10 @@ export default {
      setTimeout (function () {
        setButton.style.backgroundColor = 'gray';},3000)
 
-    
+    setTimeout(function () {
+      innerHTML1.innerHTML="時間測定";
+},3000)
+
     }
    },
     
