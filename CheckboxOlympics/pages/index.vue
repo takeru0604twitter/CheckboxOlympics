@@ -48,7 +48,7 @@ export default {
       time: undefined,
     }
   },
-  
+
   methods: {
     ready() { 
       console.log('check button is pushed')
