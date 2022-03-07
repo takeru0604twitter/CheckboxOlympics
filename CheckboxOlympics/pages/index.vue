@@ -33,7 +33,6 @@
 
       <div class="box3">
         <div @click="Time" class="o">Time:&nbsp;</div>
-        <!-- <div class="p">not yet set</div> -->
         <div class="p">{{ time }}</div>
         <div id="innerHTML1"><div class="u">not yet set</div></div>
       </div> 
@@ -66,8 +65,7 @@ export default {
        setButton.style.backgroundColor = 'gray';},3000)
 
     setTimeout(function () {
-      innerHTML1.innerHTML="時間測定";
-},3000)
+      innerHTML1.innerHTML="0.000".fontsize(2);},3000)
 
     }
    },
@@ -169,7 +167,6 @@ body {
 
 .p{
   font-size: 11px;
-
 }
 
 .q{
@@ -189,5 +186,6 @@ body {
 
 .u{
   font-size: 11px;
+  height:10px;
 }
 </style>
