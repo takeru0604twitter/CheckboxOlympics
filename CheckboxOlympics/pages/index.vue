@@ -31,10 +31,10 @@
           <div class="n"><input v-for="i in 28" :key="i" type="checkbox" /></div>
       </div>
 
-      <div class="box3">
+           <div class="box3">
         <div @click="Time" class="o">Time:&nbsp;</div>
-        <div class="p">{{ time }}</div>
-        <div id="innerHTML1"><div class="u">not yet set</div></div>
+        <div class="p" v-if="isStarted">{{ time }}</div>
+        <div id="innerHTML1" v-else><div class="u">not yet set</div></div>
       </div> 
     </div>
   </div>
@@ -46,9 +46,9 @@ export default {
   data() {
     return {
       time: undefined,
+      isStarted: false
     }
   },
-
   methods: {
     ready() { 
       console.log('check button is pushed')
@@ -58,24 +58,21 @@ export default {
       
       const GOButton =document.getElementsByClassName('s')[0]
 
-      setTimeout (function () {
-        GOButton.style.backgroundColor = 'green';},3000);
-     
-     setTimeout (function () {
-       setButton.style.backgroundColor = 'gray';},3000)
-
-    setTimeout(function () {
-      innerHTML1.innerHTML="0.000".fontsize(2);},3000)
-
-    }
-   },
-    
+      setTimeout(function () { GOButton.style.backgroundColor = 'green'; }, 3000)
+      setTimeout(function () { setButton.style.backgroundColor = 'gray'; }, 3000)
+      //setTimeout(function () { innerHTML1.innerHTML="0.000".fontsize(2); }, 3000)
+      setTimeout(() => {
+        this.isStarted = true
+        this.time = '0.000'
+      }, 3000)
+    },
     Time() {
       const date = new Date()
       this.time = date
-
     }
+  },
 }
+
 </script>
 
 <style>
