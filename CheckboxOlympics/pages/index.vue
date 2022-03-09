@@ -28,7 +28,15 @@
           <div class="r">/</div>
           <div class="s">GO</div>
         </div>
-          <div class="n"><input v-for="i in 28" :key="i" type="checkbox" /></div>
+          <div class="n">
+            <input
+              v-for="i in 28"
+              :disabled="inputStateList[i-1]"
+              :key="i"
+              type="checkbox"
+              @click="checked(i-1)"
+              />
+          </div>
       </div>
 
            <div class="box3">
@@ -46,6 +54,9 @@ export default {
   data() {
     return {
       isStarted: false,
+      inputStateList: new Array(28).fill(28),
+      i:0,
+      timerid: undefined,
     }
   },
 
@@ -58,26 +69,38 @@ export default {
       
       const GOButton =document.getElementsByClassName('s')[0]
 
-      setTimeout(function () { GOButton.style.backgroundColor = 'green'; }, 3000)
-      setTimeout(function () { setButton.style.backgroundColor = 'gray'; }, 3000)
-      //setTimeout(function () { innerHTML1.innerHTML="0.000".fontsize(2); }, 3000)
+      setTimeout(() => { GOButton.style.backgroundColor = 'green'; }, 3000)
+      setTimeout(() => { setButton.style.backgroundColor = 'gray'; }, 3000)
+      // setTimeout(function () { innerHTML1.innerHTML="0.000".fontsize(2); }, 3000)
       setTimeout(() => {
         this.isStarted = true
         this.time = 0
       }, 3000)
-      setInterval(this.time1,1)
+      this.timerid = setInterval(this.time1, 1)
+      setTimeout(() => {
+        this.inputStateList[0] = false
+      }, 3000)
     },
 
-      time1(){
-        this.time = this.time+0.001
-        this.$forceUpdate()
-        console.log(this.time);
-     },
-     
+    time1(){
+      this.time = this.time+0.001
+      this.$forceUpdate()
+      //console.log(this.time);
+    },
      
     Time() {
       this.time = date
-    }
+    },
+
+    checked(checkedIndex) {
+      this.i=this.i+1
+      console.log(this.inputStateList[this.i] = false)
+      if(this.i==28){
+        clearInterval(this.timerid);
+      }
+    }, 
+
+
   },
 }
 
