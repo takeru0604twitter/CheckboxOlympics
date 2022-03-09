@@ -33,7 +33,7 @@
 
            <div class="box3">
         <div @click="Time" class="o">Time:&nbsp;</div>
-        <div class="p" v-if="isStarted">{{ time }}</div>
+        <div class="p" v-if="isStarted">{{ time.toFixed(3) }}</div>
         <div id="innerHTML1" v-else><div class="u">not yet set</div></div>
       </div> 
     </div>
@@ -45,10 +45,10 @@
 export default {
   data() {
     return {
-      time: undefined,
-      isStarted: false
+      isStarted: false,
     }
   },
+
   methods: {
     ready() { 
       console.log('check button is pushed')
@@ -63,11 +63,19 @@ export default {
       //setTimeout(function () { innerHTML1.innerHTML="0.000".fontsize(2); }, 3000)
       setTimeout(() => {
         this.isStarted = true
-        this.time = '0.000'
+        this.time = 0
       }, 3000)
+      setInterval(this.time1,1)
     },
+
+      time1(){
+        this.time = this.time+0.001
+        this.$forceUpdate()
+        console.log(this.time);
+     },
+     
+     
     Time() {
-      const date = new Date()
       this.time = date
     }
   },
